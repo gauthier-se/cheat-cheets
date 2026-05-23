@@ -8,7 +8,8 @@ Tmux is organized into 3 levels:
 2. **Windows** — Like tabs in a browser, inside a Session.
 3. **Panes** — Visible subdivisions of your terminal within the same Window.
 
-> [!IMPORTANT] The Prefix
+> [!IMPORTANT]
+> **The Prefix**
 > By default, the prefix is `Ctrl + b`. All tmux commands start with this prefix.
 > If you have remapped it (e.g., `Ctrl + space`), adjust accordingly.
 

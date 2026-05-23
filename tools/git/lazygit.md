@@ -18,10 +18,12 @@ Navigation between panels:
 * Left/Right arrows (or `h` / `l`)
 * Mouse click
 
-> [!IMPORTANT] Universal Shortcut
+> [!IMPORTANT]
+> **Universal Shortcut**
 > **`<Space>`** — used to select (Stage), unselect, or confirm an action in almost every panel.
 
-> [!TIP] Contextual Menu
+> [!TIP]
+> **Contextual Menu**
 > Press `x` at any time to display all possible options available from your current location.
 
 ---

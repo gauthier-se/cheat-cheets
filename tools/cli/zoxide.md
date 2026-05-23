@@ -16,7 +16,8 @@ zoxide add ~/Projects/my-project
 zoxide query -ls
 ```
 
-> [!TIP] Personal Configuration
+> [!TIP]
+> **Personal Configuration**
 > Add this to your `.zshrc`:
 > ```bash
 > eval "$(zoxide init zsh)"

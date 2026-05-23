@@ -97,7 +97,8 @@ alias dc="docker compose"
 unalias ll
 ```
 
-> [!TIP] Personal Configuration
+> [!TIP]
+> **Personal Configuration**
 > For permanent aliases, add them to your `~/.zshrc`:
 > ```bash
 > alias lg="lazygit"
@@ -127,6 +128,19 @@ cd !$                 # executes: cd ~/Projects/new
 ```bash
 echo one two three
 cat !*                # executes: cat one two three
+```
+
+---
+
+## Files and Directories
+
+### `find` — Move all files from subdirectories and clean up
+
+Moves all files from subfolders into the current directory, then deletes the empty folders.
+
+```bash
+find . -mindepth 2 -type f -exec mv {} . \;
+find . -type d -empty -delete
 ```
 
 ---
