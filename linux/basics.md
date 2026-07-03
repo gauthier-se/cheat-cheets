@@ -35,10 +35,26 @@ Essential Linux commands for daily usage, along with their most useful flags.
 
 ## Permissions & Ownership
 
+### Numeric Permissions
+
+Permissions are calculated by adding these values together for the Owner, Group, and Others:
+
+| Value | Permission | Description |
+| :---: | :--- | :--- |
+| `4` | Read (`r`) | Can read the file / list the directory |
+| `2` | Write (`w`) | Can modify the file / add or delete files in the directory |
+| `1` | Execute (`x`) | Can execute the file / enter the directory |
+| `0` | None (`-`) | No permissions |
+
+*Example:* `755` = `7` (Owner: 4+2+1) + `5` (Group: 4+1) + `5` (Others: 4+1)
+
+### Commands
+
 | Command | Description |
 | :--- | :--- |
 | `chmod +x <script>` | Make a file executable |
 | `chmod 755 <dir>` | Read/Execute for everyone, Write only for owner |
+| `chmod 644 <file>` | Read/Write for owner, Read-only for everyone else |
 | `chmod 600 <key>` | Read/Write only for owner (essential for SSH keys) |
 | `chown user:group <file>` | Change the owner and group of a file |
 | `chown -R user:group <dir>`| Change ownership recursively for a directory |
