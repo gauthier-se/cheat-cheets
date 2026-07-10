@@ -135,24 +135,52 @@ My setup uses the `blink.cmp` plugin for autocompletion. The shortcuts are activ
 
 ---
 
-## 9. Git inside Neovim (lazygit.nvim)
+## 9. Git inside Neovim (vim-fugitive)
 
 ### Shortcuts
 
 | Shortcut | Action |
 | ------------ | ----------------------------------------------------------- |
-| `Space l g` | Open LazyGit (floating window on the current repository) |
-| `Space l f` | Filter the whole project's commits (history) |
-| `Space l c` | Filter the current file's commits only |
+| `Space g s` | Git **status** (fugitive summary window) |
+| `Space g b` | Git **blame** (author of each line) |
+| `Space g d` | **Diff split** of the current file |
+| `Space g l` | Git **log** of the current file |
 
 ### Commands
 
 | Command | Action |
 | --------------------------- | ---------------------------------------------------------- |
-| `:LazyGit` | Open lazygit (current directory) |
-| `:LazyGitCurrentFile` | Open lazygit at the root of the current file's Git project |
-| `:LazyGitConfig` | Open lazygit configuration file |
-| `:LazyGitFilter` | Browse the project's commit history |
-| `:LazyGitFilterCurrentFile` | Browse the current file's commit history |
+| `:Git` | Open the fugitive status window |
+| `:Git <cmd>` | Run any git command (`:Git push`, `:Git rebase -i`, ...) |
+| `:Gvdiffsplit` | Vertical diff of the current file vs the index |
+| `:Gwrite` / `:Gread` | Stage the file (`git add`) / revert it to HEAD |
+| `:Gclog` | Load the file's commit history into the quickfix list |
 
-> See `tools/git/lazygit.md` for the full LazyGit cheatsheet.
+> In the status window: `s` stage, `u` unstage, `=` toggle diff, `cc` commit, `dv` diff split.
+> See `plugins/fugitive.md` for the full cheatsheet. For the standalone LazyGit CLI, see `tools/git/lazygit.md`.
+
+---
+
+## 10. Tests (neotest — Go)
+
+| Shortcut | Action |
+| ------------ | ----------------------------------------------------------- |
+| `Space t t` | Run the **nearest** test (under the cursor) |
+| `Space t f` | Run all tests in the current **file** |
+| `Space t d` | **Debug** the nearest test (DAP) |
+| `Space t s` | Toggle the test **summary** panel |
+| `Space t o` | Show the nearest test **output** |
+
+> See `plugins/neotest.md` for the full cheatsheet.
+
+---
+
+## 11. File explorer & history
+
+| Shortcut | Action |
+| ------------ | ----------------------------------------------------------- |
+| `Space p v` | Open **netrw** (built-in file explorer) in the file's dir |
+| `Space u` | Toggle **Undotree** (undo history tree) |
+
+> netrw basics: `Enter` open, `-` go up a dir, `%` new file, `d` new dir, `D` delete, `R` rename.
+> No side file-tree plugin — I browse with netrw + Telescope (`Space s f`). See `plugins/undotree.md`.

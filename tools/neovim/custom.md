@@ -21,3 +21,14 @@
 | `Esc` (Normal mode) | Clear the highlighting from the previous search |
 | `<leader>q` | Open the "_Quickfix_" list (listed diagnostics / errors) |
 
+## 3. File Explorer (netrw)
+
+I deliberately use no side file-tree plugin. Files are browsed with the built-in
+netrw explorer plus Telescope (`<leader>sf`).
+
+| Shortcut | Action |
+| :--- | :--- |
+| `<leader>pv` | Open netrw in the current file's directory (`:Ex`) |
+
+Inside netrw: `Enter` open · `-` go up a directory · `%` new file · `d` new dir · `D` delete · `R` rename.
+
